@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        :root{
+            --dark:rgb(0, 0, 0);
+            --light:white;
+
+        }
+        .main{
+            background-color: var(--dark);
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap:40px;
+
+        }
+        .current{
+            width: 35%;
+            background-color: var(--light);
+            text-align: center;
+            height:60px;
+            padding: 10px;
+            border-radius: 20px;
+
+        }
+        h1{
+            color: var(--dark);
+        }
+        #tog{
+             width:150px;
+            background-color: var(--light);
+            text-align: center;
+            height:50px;
+            padding: 10px;
+            border-radius: 20px;
+            font-size: large;
+            border:none;
+            color: var(--dark);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="current">
+            <h1>current theme :- <span>dark</span></h1>
+        </div>
+        <div class="change">
+            <button id = "tog"> Toggle </button>
+        </div>
+    </div>
+    <script src = "script.js"></script>
+</body>
+</html>
