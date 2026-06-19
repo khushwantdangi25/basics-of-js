@@ -64,16 +64,18 @@ h2 {
     cursor: pointer;
 }
 
-.card {
+.cards {
     display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;  
-    padding: 20px;
-    border-radius: 15px;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: 20px;
+}
+
+.card {
     width: 250px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
 }
 
 .card .img img {
@@ -81,7 +83,11 @@ h2 {
     height: 120px;
     border-radius: 50%;    
     object-fit: cover;
+    overflow: hidden;
+
 }
+
+   
 
 .content {
     text-align: center;
