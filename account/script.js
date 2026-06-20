@@ -24,33 +24,39 @@ const users = {
     },
     userRender: function(){
        
-    let cardElement = document.querySelector(".card");
+   let cardElement = document.querySelector(".cards");
 
-    cardElement.innerHTML = "";
+cardElement.innerHTML = "";
 
-    this.user.forEach(function(e) {
-        let content = document.createElement("div");
-        content.classList.add("content");
+this.user.forEach(function(e) {
 
-        let h2 = document.createElement("h2");
-        h2.textContent = e.username;
+    let img = document.createElement("div");
+    img.classList.add("img");
 
-        let h3 = document.createElement("h3");
-        h3.textContent = e.bio;
+    let image = document.createElement("img");
+    image.src = e.profile;
+    img.appendChild(image);
 
-        let image = document.createElement("img");
-        image.src = e.profile;
-        
-         let img = document.createElement("div");
-        content.classList.add("img");
-        img.appendChild(image);
-         content.appendChild(img);
-        content.appendChild(h2);
-        content.appendChild(h3);
-         
-       
-        cardElement.appendChild(content);
-    });
+    let content = document.createElement("div");
+    content.classList.add("content");
+
+    let h2 = document.createElement("h2");
+    h2.textContent = e.username;
+
+    let h3 = document.createElement("h3");
+    h3.textContent = e.bio;
+
+    content.appendChild(h2);
+    content.appendChild(h3);
+
+    let card = document.createElement("div");
+    card.classList.add("card");
+
+    card.appendChild(img);
+    card.appendChild(content);
+
+    cardElement.appendChild(card);
+});
     },
     removeAccount : function(){},
 };
