@@ -34,7 +34,7 @@ let users = [{name : "Khushwant", pic : "https://tse3.mm.bing.net/th/id/OIP.ElNo
     });
         
     }
- show(users);
+//  show(users);
 
 const inp = document.querySelector("input");
 inp.addEventListener("input", function(){
