@@ -39,37 +39,57 @@
 // }).catch((e) =>{
 //         console.error(e);
 // }) ;
-const inp = document.querySelector("input");
+// const inp = document.querySelector("input");
 
-const output = document.createElement("h1");
-document.body.appendChild(output);
+// const output = document.createElement("h1");
+// document.body.appendChild(output);
 
-function pr(num) {
-    return new Promise((resolve, reject) => {
+// function pr(num) {
+//     return new Promise((resolve, reject) => {
 
-        if (isNaN(num)) {
-            reject("Please enter a valid number");
-        } else if (num > 0) {
-            resolve("It's a positive number");
-        } else if (num < 0) {
-            reject("It's a negative number");
-        } else {
-            resolve("The number is zero");
-        }
+//         if (isNaN(num)) {
+//             reject("Please enter a valid number");
+//         } else if (num > 0) {
+//             resolve("It's a positive number");
+//         } else if (num < 0) {
+//             reject("It's a negative number");
+//         } else {
+//             resolve("The number is zero");
+//         }
 
-    });
+//     });
+// }
+
+// inp.addEventListener("input", () => {
+
+//     pr(Number(inp.value))
+//         .then((msg) => {
+//             output.textContent = msg;
+//             output.style.color = "green";
+//         })
+//         .catch((msg) => {
+//             output.textContent = msg;
+//             output.style.color = "red";
+//         });
+
+// });
+
+// async and await in js
+
+function problem(a){
+
+  return new Promise((e) =>{
+    setTimeout(() =>{
+        e (a*a);
+    },2000);
+  }) 
+    
 }
-
-inp.addEventListener("input", () => {
-
-    pr(Number(inp.value))
-        .then((msg) => {
-            output.textContent = msg;
-            output.style.color = "green";
-        })
-        .catch((msg) => {
-            output.textContent = msg;
-            output.style.color = "red";
-        });
-
-});
+  async function solve(){
+   let a = await problem(15);
+   console.log(a);
+   
+   console.log("me phele aagiya");
+   
+}
+solve();
